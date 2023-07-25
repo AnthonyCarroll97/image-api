@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://unpkg.com/htmx.org@1.9.3"
+      integrity="sha384-lVb3Rd/Ca0AxaoZg5sACe8FJKF0tnUgR2Kd7ehUOG5GCcROv5uBIZsOqovBAcWua"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Image transformer</h1>
+
+    <form id="form" hx-encoding="multipart/form-data" hx-post="/upload" hx-target="#target-image">
+      <input type="file" name="image" />
+      <button>Upload</button>
+    </form>
+
+    <div id="target-image"></div>
+  </body>
+</html>
